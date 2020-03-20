@@ -1,1 +1,4 @@
 *.rpm
+root
+boot
+tinhat.img
