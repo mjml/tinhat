@@ -1,0 +1,6 @@
+root=/dev/vgtin/lvhat
+rd.skipfsck=1
+rd.shell=1
+rd.udev.info=1
+plymouth.enable=0
+
