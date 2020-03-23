@@ -1,10 +1,10 @@
 # Dirs
-RESCUE=/root/tinhat
-RESCUEROOT=/root/tinhat/root
-RESCUEBOOT=/root/tinhat/boot
+RESCUE=$(pwd)
+RESCUEROOT=$RESCUE/root
+RESCUEBOOT=$RESCUE/boot
 
 # Imgs
-RESCUEIMG=/root/tinhat/tinhat.img
+RESCUEIMG=$RESCUE/tinhat.img
 
 # LVM
 RESCUEVG=vgtin
