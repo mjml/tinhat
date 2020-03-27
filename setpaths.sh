@@ -1,7 +1,7 @@
 # Dirs
 RESCUE=$(pwd)
 RESCUEROOT=$RESCUE/root
-RESCUEBOOT=$RESCUE/boot
+RESCUEBOOT=$RESCUEROOT/boot
 
 # Imgs
 RESCUEIMG=$RESCUE/tinhat.img
