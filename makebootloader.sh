@@ -3,7 +3,12 @@
 source ./setpaths.sh
 
 set -x
-grub2-install --debug --recheck --no-floppy --no-nvram --target=x86_64-efi --efi-directory=$RESCUEBOOT /dev/sam32a1
+
+echo "Automatically creating $RESCUEBOOT/grub2/grub.cfg"
+grub2-mkconfig -o $RESCUEBOOT/grub2/grub.cfg
+
+echo "Installing grub to $RESCUEBOOT on ${RESCUEDEV}1"
+grub2-install --debug --recheck --no-floppy --no-nvram --target=x86_64-efi --efi-directory=$RESCUEBOOT ${RESCUEDEV}1
 
 echo Fixup to get the correct name for the EFI bootloader...
 mkdir -p $RESCUEBOOT/efi/boot
