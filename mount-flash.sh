@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 if [[ ! -e /dev/sam32a ]]; then
     echo "Couldn't find flash drive. Exiting."

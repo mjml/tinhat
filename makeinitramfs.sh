@@ -1,4 +1,4 @@
-#!/bin/sh
+#!/bin/bash
 
 KERNEL=$(ls boot | grep vmlinuz)
 INITRAMFS=${KERNEL/vmlinuz/initramfs}
