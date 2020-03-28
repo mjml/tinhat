@@ -7,6 +7,11 @@ else
     echo "Flash drive found at /dev/sam32a"
 fi
 
+if [[ -z $(lvs | grep lvtin) ]]; then
+    echo "Couldn't find the lvtin logical volume. Exiting."
+    exit
+fi
+
 set -x
 
 mount /dev/vgtin/lvtin root
