@@ -1,10 +1,12 @@
 #!/bin/bash
 
-if [[ ! -e /dev/sam32a ]]; then
+. ./setpaths.sh
+
+if [[ ! -e $RESCUEDEV ]]; then
     echo "Couldn't find flash drive. Exiting."
     exit
 else
-    echo "Flash drive found at /dev/sam32a"
+    echo "Flash drive found at $RESCUEDEV"
 fi
 
 if [[ -z $(lvs | grep lvtin) ]]; then
@@ -14,5 +16,5 @@ fi
 
 set -x
 
-mount /dev/vgtin/lvtin root
-mount /dev/sam32a1 root/boot
+mount $RESCUEROOTDEV root
+mount $RESCUEBOOTDEV root/boot

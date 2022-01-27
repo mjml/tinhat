@@ -3,7 +3,7 @@
 RESCUE=$(pwd)
 RESCUEROOT=$RESCUE/root
 RESCUEBOOT=$RESCUEROOT/boot
-RESCUEDEV=/dev/sam32a
+RESCUEBOOTDEV=/dev/sdd1
 VER=31
 FCVER=fc$VER
 
@@ -11,9 +11,9 @@ FCVER=fc$VER
 RESCUEIMG=$RESCUE/tinhat.img
 
 # LVM
-RESCUEVG=vgtin
-RESCUELV=lvtin
-RESCUELVROOT=/dev/$RESCUEVG/$RESCUELV
+RESCUEVG=vgmarble
+RESCUELV=lvroot
+RESCUEROOTDEV=/dev/$RESCUEVG/$RESCUELV
 
 unset -f dnf-tinhat
 function dnf-tinhat {

@@ -4,5 +4,5 @@
 
 set -x
 
-umount $RESCUEROOT/boot
+umount $RESCUEBOOT
 umount $RESCUEROOT
